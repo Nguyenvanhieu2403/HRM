@@ -1,0 +1,12 @@
+E:\DoAnCNPM\HRM\HRM.DataContext\bin\Debug\net8.0\HRM.DataContext.deps.json
+E:\DoAnCNPM\HRM\HRM.DataContext\bin\Debug\net8.0\HRM.DataContext.dll
+E:\DoAnCNPM\HRM\HRM.DataContext\bin\Debug\net8.0\HRM.DataContext.pdb
+E:\DoAnCNPM\HRM\HRM.DataContext\obj\Debug\net8.0\HRM.DataContext.csproj.AssemblyReference.cache
+E:\DoAnCNPM\HRM\HRM.DataContext\obj\Debug\net8.0\HRM.DataContext.GeneratedMSBuildEditorConfig.editorconfig
+E:\DoAnCNPM\HRM\HRM.DataContext\obj\Debug\net8.0\HRM.DataContext.AssemblyInfoInputs.cache
+E:\DoAnCNPM\HRM\HRM.DataContext\obj\Debug\net8.0\HRM.DataContext.AssemblyInfo.cs
+E:\DoAnCNPM\HRM\HRM.DataContext\obj\Debug\net8.0\HRM.DataContext.csproj.CoreCompileInputs.cache
+E:\DoAnCNPM\HRM\HRM.DataContext\obj\Debug\net8.0\HRM.DataContext.dll
+E:\DoAnCNPM\HRM\HRM.DataContext\obj\Debug\net8.0\refint\HRM.DataContext.dll
+E:\DoAnCNPM\HRM\HRM.DataContext\obj\Debug\net8.0\HRM.DataContext.pdb
+E:\DoAnCNPM\HRM\HRM.DataContext\obj\Debug\net8.0\ref\HRM.DataContext.dll

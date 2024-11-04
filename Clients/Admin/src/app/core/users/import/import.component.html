@@ -1,0 +1,41 @@
+<p-dialog #dialog header="Import Người dùng" [(visible)]="isShow" [modal]="true"
+  [styleClass]="'ag-modal force-full-width'" [style]="{'width': '1200px'}" closeIcon="ci ci-close"
+  maximizeIcon="ci ci-maximize" minimizeIcon="ci ci-minimize" [maximizable]="true" [autoZIndex]="true">
+
+  <div class="col-12 md:col-12">
+    <div class="col-12 md:col-12 grid">
+      <p-toast />
+      <div class="p-field col-12 md:col-12">
+        <div class="col-12 md:col-12">
+          <div class="col-12 md:col-12">
+            <div class="p-field col-12 md:col-12">
+              <label>{{'FORMIMPORT_SelectedFile' | translate}}</label>
+              <p-fileUpload #fileControl [multiple]="false" [disabled]="submitting"
+                showUploadButton="false" customUpload="true" (uploadHandler)="myUploader($event)" name="files"
+                maxFileSize="10000000" accept=".xlsx, .xsl" chooseLabel="{{'FORMIMPORT_lblSelectFile' | translate}}"
+                uploadLabel="{{'FORMIMPORT_lblUpload' | translate}}" cancelLabel="{{'FORMIMPORT_lblCancel' | translate}}">
+              </p-fileUpload>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 md:col-12">
+    <p-progressBar mode="indeterminate" [style]="{'height': '6px'}" *ngIf="isUploading"></p-progressBar>
+  </div>
+
+  <p-footer>
+    <div class="col-12 md:col-12">
+      <div class="col-8 md:col-8 fl h-text-left">
+        <button pButton pRipple type="button" icon="pi pi-download" class=" p-button-info mr-2 mb-2"
+          label="Tải xuống biểu mẫu" (click)="downloadForm()"></button>
+      </div>
+      <div class="col-4 md:col-4 fr">
+        <button pButton pRipple type="button" icon="pi pi-upload" class=" p-button-info mr-2 mb-2" label="{{'BUTTON.UPLOAD' | translate}}"
+          (click)="onUpload()"></button>
+      </div>
+    </div>
+  </p-footer>
+
+</p-dialog>

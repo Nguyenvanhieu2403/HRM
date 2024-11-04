@@ -1,0 +1,212 @@
+<p-dialog
+  #dialog
+  header="Chỉnh sửa hồ sơ"
+  [(visible)]="isShow"
+  [modal]="true"
+  [styleClass]="'ag-modal force-full-width'"
+  [style]="{ width: '1200px' }"
+  closeIcon="ci ci-close"
+  maximizeIcon="ci ci-maximize"
+  minimizeIcon="ci ci-minimize"
+  [maximizable]="true"
+  [autoZIndex]="true"
+>
+  <div class="col-12 md:col-12">
+    <form #formElement [formGroup]="formGroup">
+      <div class="col-12 md:col-12">
+        <validation-summary
+          #validationSummary
+          [formElement]="formElement"
+          [formGroup]="formGroup"
+        >
+        </validation-summary>
+      </div>
+
+      <div class="col-12 md:col-12 p-fluid p-formgrid grid">
+        <div class="field col-12 md:col-6">
+          <label for="id">Mã nhân viên</label>
+          <input
+            id="disabled-input"
+            type="text"
+            pInputText
+            [(ngModel)]="itemDetail.id"
+            formControlName="id"
+            [disabled]="true"
+          />
+        </div>
+        <div class="field col-12 md:col-6">
+          <label for="name"
+            >Tên nhân viên <span style="color: red">*</span></label
+          >
+          <input
+            type="text"
+            pInputText
+            [(ngModel)]="itemDetail.name"
+            formControlName="name"
+          />
+        </div>
+        <div class="field col-12 md:col-6">
+          <label for="email">Email <span style="color: red">*</span> </label>
+          <input
+            type="text"
+            pInputText
+            [(ngModel)]="itemDetail.email"
+            autocomplete="off"
+            formControlName="email"
+          />
+        </div>
+        <div class="field col-12 md:col-6">
+          <label for="educationLevel"
+            >Trình độ học vấn <span style="color: red">*</span>
+          </label>
+          <p-dropdown
+            [options]="listEducationLevel"
+            [(ngModel)]="itemDetail.educationLevel"
+            formControlName="educationLevel"
+            appendTo="body"
+          >
+          </p-dropdown>
+        </div>
+        <div class="field col-12 md:col-6">
+          <label for="contract"
+            >Hợp đồng <span style="color: red">*</span>
+          </label>
+          <p-dropdown
+            [options]="listLaborContract"
+            [(ngModel)]="itemDetail.contract"
+            formControlName="contract"
+            appendTo="body"
+          >
+          </p-dropdown>
+        </div>
+        <div class="field col-12 md:col-6">
+          <label for="contractTime"
+            >Thời gian hợp đồng <span style="color: red">*</span>
+          </label>
+          <div class="row" style="display: flex; flex-wrap: wrap">
+            <div class="field col-12 md:col-6">
+              <p-calendar
+                [(ngModel)]="itemDetail.startDate"
+                [iconDisplay]="'input'"
+                [showIcon]="true"
+                formControl="contractTime"
+                [placeholder]="itemDetail.startDate"
+                dateFormat="dd/mm/yy"
+                inputId="icondisplay"
+              />
+            </div>
+            <div class="field col-12 md:col-6">
+              <p-calendar
+                [(ngModel)]="itemDetail.endDate"
+                [iconDisplay]="'input'"
+                [showIcon]="true"
+                formControl="contractTime"
+                [placeholder]="itemDetail.endDate"
+                dateFormat="dd/mm/yy"
+                inputId="icondisplay"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="field col-12 md:col-6">
+          <label for="department"
+            >Phòng ban <span style="color: red">*</span>
+          </label>
+          <p-dropdown
+            [options]="listDepartment"
+            [(ngModel)]="itemDetail.department"
+            formControlName="department"
+            appendTo="body"
+          >
+          </p-dropdown>
+        </div>
+        <div class="field col-12 md:col-6">
+          <label for="position"
+            >Chức vụ <span style="color: red">*</span>
+          </label>
+          <p-dropdown
+            [options]="listPosition"
+            [(ngModel)]="itemDetail.position"
+            formControlName="position"
+            appendTo="body"
+          >
+          </p-dropdown>
+        </div>
+        <div class="field col-12 md:col-6">
+          <label for="salary">Lương <span style="color: red">*</span> </label>
+          <input
+            type="text"
+            pInputText
+            [(ngModel)]="itemDetail.salary"
+            autocomplete="off"
+            formControlName="salary"
+          />
+        </div>
+        <div class="field col-12 md:col-6">
+          <label for="address"
+            >Địa chỉ <span style="color: red">*</span>
+          </label>
+          <input
+            type="text"
+            pInputText
+            [(ngModel)]="itemDetail.address"
+            autocomplete="off"
+            formControlName="address"
+          />
+        </div>
+        <div class="field col-12 md:col-6">
+          <label for="phoneNumber"
+            >Số điện thoại <span style="color: red">*</span>
+          </label>
+          <input
+            type="text"
+            pInputText
+            [(ngModel)]="itemDetail.phoneNumber"
+            autocomplete="off"
+            formControlName="phoneNumber"
+          />
+        </div>
+        <div class="field col-12 md:col-6">
+          <label for="gender">Giới tính </label>
+          <input
+            type="text"
+            pInputText
+            [(ngModel)]="itemDetail.gender"
+            autocomplete="off"
+            formControlName="gender"
+          />
+        </div>
+        <div class="field col-12 md:col-6">
+          <label for="dob">Ngày sinh </label>
+          <input
+            type="text"
+            pInputText
+            [(ngModel)]="itemDetail.dob"
+            autocomplete="off"
+            formControlName="dob"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+  <p-footer>
+    <div class="col-12 md:col-12">
+      <div class="col-8 md:col-8 fl h-text-left"></div>
+      <div class="col-4 md:col-4 fr">
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="{{ 'BUTTON.SAVE_CLOSE' | translate }}"
+          icon="pi pi-save"
+          [disabled]="submitting"
+          class="p-button mr-2 mb-2"
+          (click)="save()"
+        ></button>
+        <!-- 
+        <button pButton pRipple type="button" label="{{'BUTTON.SAVE_CONTINUE' | translate}}" icon="pi pi-save"
+          [disabled]="submitting" class="p-button mr-2 mb-2" (click)="save()"></button> -->
+      </div>
+    </div>
+  </p-footer>
+</p-dialog>
