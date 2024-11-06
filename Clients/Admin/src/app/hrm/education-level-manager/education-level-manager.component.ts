@@ -39,14 +39,14 @@ export class EducationLevelManagerComponent extends SecondPageIndexBase implemen
         width: 15,
       },
       {
-        field: 'educationLevelName',
+        field: 'educationName',
         header: 'Tên trình độ',
         visible: true,
         sort: false,
         width: 15,
       },
       {
-        field: 'majorName',
+        field: 'major',
         header: 'Tên chuyên ngành',
         visible: true,
         sort: false,
@@ -64,24 +64,34 @@ export class EducationLevelManagerComponent extends SecondPageIndexBase implemen
 
   ngOnInit() {
     this.getCols();
-    this.dataSource = [
-      {
-        id: 1,
-        educationLevelName: 'Đại học',
-        majorName: 'Công nghệ thông tin',
-      },
-      {
-        id: 2,
-        educationLevelName: 'Cao đẳng',
-        majorName: 'Kế toán',
-      },
-      {
-        id: 3,
-        educationLevelName: 'Trung cấp',
-        majorName: 'Kỹ thuật điện',
-      },
+    this.getData();
+  }
 
-    ]
+  search() {
+    this.pageIndex = 1;
+    this.pageSize = 20;
+    this.totalRecord = 0;
+    this.getData();
+  }
+
+  getData() {
+    this.isLoading = true;
+    this.code = this.code ? this.code.trim() : '';
+    var model = {
+      code: this.code ?? null,
+      pageNo: this.pageIndex - 1,
+      pageSize: this.pageSize,
+    };
+
+    this._service
+      .getAllEducationLevel(model)
+      .then((res) => {
+        if (res) {
+          this.dataSource = res.data;
+          this.totalRecord = res.totalRecord;
+        }
+      })
+      .finally(() => (this.isLoading = false));
   }
 
   onAdd() {

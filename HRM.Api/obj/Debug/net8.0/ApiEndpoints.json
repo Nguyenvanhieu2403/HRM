@@ -1,5 +1,158 @@
 [
   {
+    "ContainingType": "VnPostLib.Common.Base.BaseController\u00602[[HRM.Repository.Interfaces.IEducationLevelRepos, HRM.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[HRM.DataContext.EducationLevel, HRM.DataContext, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Post",
+    "RelativePath": "EducationLevel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "HRM.DataContext.EducationLevel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VnPostLib.Common.Base.BaseController\u00602[[HRM.Repository.Interfaces.IEducationLevelRepos, HRM.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[HRM.DataContext.EducationLevel, HRM.DataContext, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "EducationLevel/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VnPostLib.Common.Base.BaseController\u00602[[HRM.Repository.Interfaces.IEducationLevelRepos, HRM.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[HRM.DataContext.EducationLevel, HRM.DataContext, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Put",
+    "RelativePath": "EducationLevel/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "HRM.DataContext.EducationLevel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VnPostLib.Common.Base.BaseController\u00602[[HRM.Repository.Interfaces.IEducationLevelRepos, HRM.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[HRM.DataContext.EducationLevel, HRM.DataContext, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "EducationLevel/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VnPostLib.Common.Base.BaseController\u00602[[HRM.Repository.Interfaces.IEducationLevelRepos, HRM.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[HRM.DataContext.EducationLevel, HRM.DataContext, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "DeleteMany",
+    "RelativePath": "EducationLevel/DeleteMany",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "models",
+        "Type": "System.Collections.Generic.List\u00601[[HRM.DataContext.EducationLevel, HRM.DataContext, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VnPostLib.Common.Base.BaseController\u00602[[HRM.Repository.Interfaces.IEducationLevelRepos, HRM.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[HRM.DataContext.EducationLevel, HRM.DataContext, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetsAll",
+    "RelativePath": "EducationLevel/GetsAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VnPostLib.Common.Base.BaseController\u00602[[HRM.Repository.Interfaces.IEducationLevelRepos, HRM.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[HRM.DataContext.EducationLevel, HRM.DataContext, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetsBySearch",
+    "RelativePath": "EducationLevel/GetsBySearch",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "VnPostLib.Common.Base.BaseSearchModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRM.Api.Controllers.EducationLevelController",
+    "Method": "GetsEducationLevel",
+    "RelativePath": "EducationLevel/GetsEducationLevel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "HRM.DataContext.Model.EducationLevelModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRM.Api.Controllers.EducationLevelController",
+    "Method": "GetsEducationLevelId",
+    "RelativePath": "EducationLevel/GetsEducationLevelId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VnPostLib.Common.Base.BaseController\u00602[[HRM.Repository.Interfaces.IEducationLevelRepos, HRM.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[HRM.DataContext.EducationLevel, HRM.DataContext, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "InsertMany",
+    "RelativePath": "EducationLevel/InsertMany",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "models",
+        "Type": "System.Collections.Generic.List\u00601[[HRM.DataContext.EducationLevel, HRM.DataContext, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HRM.Api.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

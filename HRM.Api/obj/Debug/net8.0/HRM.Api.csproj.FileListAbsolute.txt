@@ -122,3 +122,4 @@ E:\DoAnCNPM\HRM\HRM.Api\obj\Debug\net8.0\refint\HRM.Api.dll
 E:\DoAnCNPM\HRM\HRM.Api\obj\Debug\net8.0\HRM.Api.pdb
 E:\DoAnCNPM\HRM\HRM.Api\obj\Debug\net8.0\HRM.Api.genruntimeconfig.cache
 E:\DoAnCNPM\HRM\HRM.Api\obj\Debug\net8.0\ref\HRM.Api.dll
+E:\DoAnCNPM\HRM\HRM.Api\obj\Debug\net8.0\HRM.Api.sourcelink.json

@@ -13,3 +13,4 @@ E:\DoAnCNPM\HRM\HRM.Repository\obj\Debug\net8.0\HRM.Repository.dll
 E:\DoAnCNPM\HRM\HRM.Repository\obj\Debug\net8.0\refint\HRM.Repository.dll
 E:\DoAnCNPM\HRM\HRM.Repository\obj\Debug\net8.0\HRM.Repository.pdb
 E:\DoAnCNPM\HRM\HRM.Repository\obj\Debug\net8.0\ref\HRM.Repository.dll
+E:\DoAnCNPM\HRM\HRM.Repository\obj\Debug\net8.0\HRM.Repository.sourcelink.json

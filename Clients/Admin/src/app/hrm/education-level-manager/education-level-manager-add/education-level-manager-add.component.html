@@ -24,6 +24,18 @@
 
       <div class="col-12 md:col-12 p-fluid p-formgrid grid">
         <div class="field col-12 md:col-12">
+          <label for="educationLevelId">Mã trình độ</label>
+          <input
+            id="disabled-input"
+            type="text"
+            pInputText
+            [(ngModel)]="itemDetail.id"
+            formControlName="educationLevelId"
+            [disabled]="true"
+            [readOnly]="true"
+          />
+        </div>
+        <div class="field col-12 md:col-12">
           <label for="educationLevelName"
             >Tên trình độ <span style="color: red">*</span></label
           >

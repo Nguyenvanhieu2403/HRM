@@ -3,7 +3,7 @@
     "gateway": "http://localhost/gwhrm",
     "coreEndpoint": "http://localhost/gwhrm/coreapi",
     "notificationHub": "http://localhost/gwhrm/notifi",
-    "HrmEndpoint": "https://localhost:7195",
+    "HrmEndpoint": "https://localhost:7179",
     "akeneoEndpoint": "https://akeneo.baprangbo.site/api/rest/v1"
   },
   "authenticationSettings": {

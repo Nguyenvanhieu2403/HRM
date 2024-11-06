@@ -9,6 +9,7 @@ namespace HRM.DataContext.Configs
     {
         public static void DepedencyInjectionDatacontext(this IServiceCollection services, IConfiguration configuration)
         {
+            DapperPlusManager.Entity<EducationLevel>().Table("HRM.EducationLevel");
         }
     }
 }

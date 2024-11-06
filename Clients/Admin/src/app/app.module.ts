@@ -47,6 +47,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { CalendarModule } from 'primeng/calendar';
 import { ChartModule } from 'primeng/chart';
+import { InputTextModule } from 'primeng/inputtext';
 import { ProfileManagerComponent } from './hrm/profile-manager/profile-manager.component';
 import { ProfileManagerAddComponent } from './hrm/profile-manager/profile-manager-add/profile-manager-add.component';
 import { ProfileManagerEditComponent } from './hrm/profile-manager/profile-manager-edit/profile-manager-edit.component';
@@ -105,6 +106,7 @@ export function createTranslateLoader(http: HttpClient) {
     InputTextareaModule,
     InputSwitchModule,
     ChartModule,
+    InputTextModule,
   ],
   declarations: [	
     AppComponent,
