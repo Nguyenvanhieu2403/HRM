@@ -24,25 +24,37 @@
 
       <div class="col-12 md:col-12 p-fluid p-formgrid grid">
         <div class="field col-12 md:col-12">
-          <label for="educationLevelName"
+          <label for="educationLevelId">Mã trình độ</label>
+          <input
+            id="disabled-input"
+            type="text"
+            pInputText
+            [(ngModel)]="itemDetail.id"
+            formControlName="educationLevelId"
+            [disabled]="true"
+            [readOnly]="true"
+          />
+        </div>
+        <div class="field col-12 md:col-12">
+          <label for="educationName"
             >Tên trình độ <span style="color: red">*</span></label
           >
           <input
             type="text"
             pInputText
-            [(ngModel)]="itemDetail.educationLevelName"
-            formControlName="educationLevelName"
+            [(ngModel)]="itemDetail.educationName"
+            formControlName="educationName"
           />
         </div>
         <div class="field col-12 md:col-12">
-          <label for="majorName"
+          <label for="major"
             >Tên chuyên ngành <span style="color: red">*</span></label
           >
           <input
             type="text"
             pInputText
-            [(ngModel)]="itemDetail.majorName"
-            formControlName="majorName"
+            [(ngModel)]="itemDetail.major"
+            formControlName="major"
           />
         </div>
       </div>
@@ -62,9 +74,6 @@
           class="p-button mr-2 mb-2"
           (click)="save()"
         ></button>
-        <!-- 
-        <button pButton pRipple type="button" label="{{'BUTTON.SAVE_CONTINUE' | translate}}" icon="pi pi-save"
-          [disabled]="submitting" class="p-button mr-2 mb-2" (click)="save()"></button> -->
       </div>
     </div>
   </p-footer>

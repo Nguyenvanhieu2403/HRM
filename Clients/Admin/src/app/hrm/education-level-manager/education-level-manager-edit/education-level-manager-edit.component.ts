@@ -12,9 +12,9 @@ import { EducationLevelManagerService } from '../../service/education-level-mana
 export class EducationLevelManagerEditComponent extends SecondPageEditBase
 implements OnInit
 {
-
-  educationLevelName: any;
-  majorName: any;
+  educationLevelId: any;
+  educationName: any;
+  major: any;
 
   constructor(
     protected _service: EducationLevelManagerService,
@@ -23,8 +23,9 @@ implements OnInit
   ) {
     super(_service, _injector); 
     this.formGroup = new UntypedFormGroup({
-      educationLevelName: new UntypedFormControl('', [Validators.required]),
-      majorName: new UntypedFormControl('', [Validators.required]),
+      educationLevelId: new UntypedFormControl('', [Validators.required]),
+      educationName: new UntypedFormControl('', [Validators.required]),
+      major: new UntypedFormControl('', [Validators.required]),
     });
   }
 
@@ -36,7 +37,47 @@ implements OnInit
     this.resetForm();
 
     if (model.id > 0) {
-      this.itemDetail = model;
+      this._service.getById(model.id).then(
+        (rs) => {
+          this.itemDetail = rs.data;
+        },
+        (error) => {
+          this._notifierService.showWarning(
+            this._translateService.instant('MESSAGE.NOT_FOUND_ERROR')
+          );
+        }
+      );
     }
+  }
+
+  async save() {
+    if (this.formGroup.invalid) {
+      this.submitting = false;
+      this.validationSummary.showValidationSummary();
+      return;
+    }
+    this.onUpdate();
+  }
+
+  onUpdate() {
+    const model = {
+      id: this.itemDetail.id,
+      educationName: this.itemDetail.educationName,
+      major: this.itemDetail.major,
+      status: this.itemDetail.status,
+    }
+    this.submitting = true;
+    this._service.updateEducationLevel(this.itemDetail.id, model).then(
+      (response) => {
+        this.closePopupMethod(true);
+        this._notifierService.showUpdateDataSuccess();
+        this.onAfterSave();
+        this.submitting = false;
+      },
+      (error) => {
+        this._notifierService.showUpdateDataFailed();
+        this.submitting = false;
+      }
+    );
   }
 }

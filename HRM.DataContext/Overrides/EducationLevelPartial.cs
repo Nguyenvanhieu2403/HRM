@@ -10,13 +10,9 @@ namespace HRM.DataContext
 {
     public partial class EducationLevel : IBaseModel
     {
-        [NotMapped]
         public long Id { get; set; }
-        [NotMapped]
         public byte? Status { get; set; }
-        [NotMapped]
         public DateTime? Modified { get; set; }
-        [NotMapped]
         public long? ModifiedBy { get; set; }
     }
 }

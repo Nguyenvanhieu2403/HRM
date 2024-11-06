@@ -102,8 +102,8 @@ export class EducationLevelManagerComponent extends SecondPageIndexBase implemen
     // if (item && item.id)
     var model = {
       id: item.id,
-      educationLevelName: item.educationLevelName,
-      majorName: item.majorName,
+      educationName: item.educationName,
+      major: item.major,
     };
     this.pEdit.showPopup(model);
   }
@@ -113,7 +113,16 @@ export class EducationLevelManagerComponent extends SecondPageIndexBase implemen
         .showConfirm("Bạn có chắc chắn muốn xóa không?")
         .then((res) => {
           if (res) {
-            this._notifierService.showSuccess("Xóa thành công");
+            this._service.deleteEducationLevel(item.id).then(
+              (response) => {
+                this._notifierService.showDeleteDataSuccess();
+                this._notifierService.showSuccess("Xóa thành công");
+                this.getData();
+              },
+              (error) => {
+                this._notifierService.showSuccess("Xóa thất bại: " + error.error.message);
+              }
+            );
           }
         });
   }

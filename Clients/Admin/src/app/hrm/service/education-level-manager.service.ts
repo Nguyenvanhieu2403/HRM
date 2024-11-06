@@ -32,4 +32,25 @@ export class EducationLevelManagerService extends BaseService {
       .pipe(catchError((err) => this.handleError(err, this._injector)))
       .toPromise();
   }
+
+  getById(id: any): Promise<any> {
+    const apiUrl = `${this.serviceUri}/${id}`;
+    return this._http.get<any>(apiUrl)
+      .pipe(catchError((err) => this.handleError(err, this._injector)))
+      .toPromise();
+  }
+
+  updateEducationLevel(id: any, data: any): Promise<any> {
+    const apiUrl = `${this.serviceUri}/${id}`;
+    return this._http.put<any>(apiUrl, data)
+      .pipe(catchError((err) => this.handleError(err, this._injector)))
+      .toPromise();
+  }
+
+  deleteEducationLevel(id: any): Promise<any> {
+    const apiUrl = `${this.serviceUri}/${id}`;
+    return this._http.delete<any>(apiUrl)
+      .pipe(catchError((err) => this.handleError(err, this._injector)))
+      .toPromise();
+  }
 }

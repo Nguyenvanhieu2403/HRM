@@ -121,8 +121,13 @@
           class="ag-overlay-menu__item-wrapper"
         >
           <div class="ag-overlay-menu__item">
-            <!-- <p-checkbox [(ngModel)]="col.visible" [label]="col.header" binary="true" (click)="onSelectedVisible()">
-            </p-checkbox> -->
+            <p-checkbox
+              [(ngModel)]="col.visible"
+              [label]="col.header"
+              binary="true"
+              (click)="onSelectedVisible()"
+            >
+            </p-checkbox>
           </div>
         </div>
       </p-overlayPanel>
@@ -211,7 +216,6 @@
                   pTooltip="{{ 'BUTTON.EDIT' | translate }}"
                 ></button>
                 <button
-                  *ngIf="!rowData.status"
                   pButton
                   pRipple
                   type="button"
